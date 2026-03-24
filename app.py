@@ -9,9 +9,11 @@ from src.agent import build_agent_executor
 load_dotenv()
 
 
-st.set_page_config(page_title="Agente Simples", page_icon="🤖")
-st.title("🤖 Agente Simples com LangChain")
-st.caption("Exemplo simples para deploy no Render usando Dockerfile.")
+st.set_page_config(page_title="Agente de apostas", page_icon="📊")
+st.title("📊 Agente de apostas (odds e calculos)")
+st.caption(
+    "Assistente educativo: odds decimais, retorno, parlay e jogo responsavel — LangChain no Render."
+)
 
 
 @st.cache_resource
