@@ -6,6 +6,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.tools import tool
 from langchain_openai import ChatOpenAI
 
+
 @tool
 def data_hora_atual(_: str = "") -> str:
     """Retorna data e hora atuais no formato ISO."""
@@ -117,7 +118,7 @@ def trilha_itinerario(destino: str, dias: str, interesses: str = "") -> str:
 
 def build_agent_executor() -> AgentExecutor:
     model_name = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
-    llm = ChatOpenAI(model=model_name, temperature=0.45)
+    llm = ChatOpenAI(model=model_name, temperature=0.7)
 
     tools = [
         data_hora_atual,
