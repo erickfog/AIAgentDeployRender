@@ -9,10 +9,10 @@ from src.agent import build_agent_executor
 load_dotenv()
 
 
-st.set_page_config(page_title="Agente de apostas", page_icon="📊")
-st.title("📊 Agente de apostas (odds e calculos)")
+st.set_page_config(page_title="Agencia de viagem", page_icon="✈️")
+st.title("✈️ Agencia de viagem (roteiro e custos)")
 st.caption(
-    "Assistente educativo: odds decimais, retorno, parlay e jogo responsavel — LangChain no Render."
+    "Assistente educativo: planejamento de viagem, itinerario generico e estimativa de custos — LangChain no Render."
 )
 
 
@@ -35,7 +35,7 @@ for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
-if user_input := st.chat_input("Digite sua pergunta..."):
+if user_input := st.chat_input("Conte sua viagem (destino, datas e interesse)..."):
     st.session_state.messages.append({"role": "user", "content": user_input})
     with st.chat_message("user"):
         st.markdown(user_input)
